@@ -15,7 +15,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   return (
     <footer className="bg-brand-blue text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between">
-        <Logo inverted />
+        <Logo onDark className="h-9 w-auto" />
         <p className="text-sm text-white/80">
           © <CurrentYear /> {site.legalName}. {dict.footer.rights}
         </p>

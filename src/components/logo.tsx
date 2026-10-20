@@ -1,12 +1,8 @@
-export function Logo({ inverted = false }: { inverted?: boolean }) {
-  return (
-    <span className="inline-flex items-center gap-2" aria-label="NRP Microcrédito">
-      <span className="grid h-9 w-9 place-items-center rounded-lg bg-brand-red text-sm font-extrabold tracking-tight text-white shadow-sm">
-        NRP
-      </span>
-      <span className={`text-lg font-bold leading-none ${inverted ? "text-white" : "text-brand-blue"}`}>
-        Microcrédito
-      </span>
-    </span>
-  );
+import Image from "next/image";
+import logo from "../../public/nrp-logo.png";
+
+export function Logo({ onDark = false, className = "h-10 w-auto" }: { onDark?: boolean; className?: string }) {
+  const img = <Image src={logo} alt="NRP Microcrédito E.I" priority className={className} />;
+  // The logo has black lettering, so on dark backgrounds it sits on a white chip.
+  return onDark ? <span className="inline-flex rounded-xl bg-white px-3 py-2">{img}</span> : img;
 }

@@ -17,7 +17,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       <div className="h-1 bg-gradient-to-r from-brand-red via-brand-red to-brand-blue" />
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href={`/${lang}`} aria-label={dict.nav.home}>
-          <Logo />
+          <Logo className="h-12 w-auto md:h-14" />
         </Link>
         <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
           {links.map((l) => (

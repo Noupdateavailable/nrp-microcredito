@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { Logo } from "@/components/logo";
 import { site, telHref, whatsappLink } from "@/config/site";
 
 
@@ -138,8 +139,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             <div className="absolute inset-y-0 left-0 w-1/3 bg-brand-red" />
             <div className="absolute inset-y-0 left-1/3 w-1/3 bg-white" />
             <div className="absolute inset-0 grid place-items-center">
-              <span className="rounded-2xl bg-white px-6 py-4 text-4xl font-extrabold text-brand-blue shadow-xl">
-                NRP
+              <span className="rounded-2xl bg-white px-6 py-5 shadow-xl">
+                <Logo className="h-24 w-auto" />
               </span>
             </div>
           </div>
