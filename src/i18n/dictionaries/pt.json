@@ -1,72 +1,133 @@
 {
   "meta": {
-    "title": "NRP Microcrédito — Crédito rápido e justo em Moçambique",
-    "description": "Microcrédito para pequenos negócios, trabalhadores e famílias em Moçambique. Peça o seu crédito online em poucos minutos."
+    "title": "NRP Microcrédito — Sua escolha responsável",
+    "description": "Crédito pessoal, crédito para negócios e incentivo ao empreendedor em Maputo. Soluções ágeis e transparentes. Peça o seu crédito online."
   },
   "nav": {
     "home": "Início",
-    "products": "Produtos",
-    "how": "Como funciona",
+    "products": "Empréstimos",
+    "how": "Requisitos",
     "about": "Sobre nós",
-    "contact": "Contacto",
+    "contact": "Contactos",
     "apply": "Pedir crédito",
     "switchLanguage": "English"
   },
   "hero": {
-    "eyebrow": "Microcrédito em Moçambique",
-    "title": "O crédito certo para fazer crescer o seu negócio",
-    "subtitle": "Valores à sua medida, prestações claras e resposta rápida. Sem burocracia desnecessária.",
+    "eyebrow": "Microcrédito em Maputo",
+    "title": "Sua escolha responsável.",
+    "subtitle": "Apoiando o seu crescimento financeiro com soluções ágeis e transparentes, com taxas entre 20% e 25% ao mês.",
     "primary": "Pedir crédito agora",
     "secondary": "Falar no WhatsApp",
     "stats": [
-      { "value": "48h", "label": "Resposta ao pedido" },
-      { "value": "100%", "label": "Condições transparentes" },
-      { "value": "MZN", "label": "Crédito em meticais" }
+      {
+        "value": "18–25%",
+        "label": "Taxa de juro mensal"
+      },
+      {
+        "value": "Bens móveis",
+        "label": "Como garantia"
+      },
+      {
+        "value": "Seg–Sex",
+        "label": "08:00 – 19:00"
+      }
     ]
   },
   "products": {
-    "title": "Os nossos produtos",
-    "subtitle": "Escolha o crédito que melhor se adapta à sua necessidade.",
+    "title": "Empréstimos",
+    "subtitle": "Escolha a solução de crédito que se adapta às suas necessidades.",
+    "labels": {
+      "rate": "Taxa de juro",
+      "perMonth": "ao mês",
+      "amount": "Montante",
+      "guarantee": "Garantia",
+      "documents": "Documentos a apresentar"
+    },
+    "guarantee": "Bens móveis",
     "items": [
       {
-        "name": "Crédito Negócio",
-        "description": "Para comerciantes e pequenos empreendedores que precisam de stock, equipamento ou capital de giro."
+        "key": "personal",
+        "name": "Crédito Pessoal",
+        "description": "Soluções financeiras personalizadas para as suas necessidades específicas, com rapidez e eficiência.",
+        "rate": "25%",
+        "amount": "",
+        "docs": [
+          "Bilhete de Identidade (BI)",
+          "NUIT"
+        ]
       },
       {
-        "name": "Crédito Salário",
-        "description": "Para trabalhadores com rendimento fixo que precisam de apoio para despesas pontuais."
+        "key": "business",
+        "name": "Crédito para Negócios",
+        "description": "Suporte financeiro estratégico para promover o crescimento sustentável das suas actividades empresariais.",
+        "rate": "20% – 25%",
+        "amount": "30.000 – 70.000 MZN",
+        "docs": [
+          "Bilhete de Identidade (BI)",
+          "NUIT",
+          "Alvará",
+          "Certidão Comercial"
+        ]
       },
       {
-        "name": "Crédito Emergência",
-        "description": "Montantes menores, aprovação mais rápida, para imprevistos de saúde, escola ou família."
+        "key": "entrepreneur",
+        "name": "Incentivo ao Empreendedor",
+        "description": "Facilitamos o acesso ao crédito para transformar os seus planos em realizações.",
+        "rate": "18%",
+        "amount": "",
+        "docs": [
+          "Bilhete de Identidade (BI)",
+          "NUIT"
+        ]
       }
     ],
     "cta": "Pedir este crédito"
   },
   "how": {
-    "title": "Como funciona",
+    "title": "Requisitos",
+    "subtitle": "Documentos gerais para qualquer pedido de crédito:",
+    "requirements": [
+      "Bilhete de Identidade (BI)",
+      "NUIT",
+      "Extracto bancário dos últimos 3 meses",
+      "Declaração de rendimentos"
+    ],
+    "stepsTitle": "Como funciona",
     "steps": [
-      { "title": "Faça o pedido", "text": "Preencha o formulário online em poucos minutos." },
-      { "title": "Análise", "text": "A nossa equipa analisa o pedido e contacta-o por telefone." },
-      { "title": "Documentos", "text": "Apresente os documentos necessários num dos nossos balcões." },
-      { "title": "Receba o crédito", "text": "Após aprovação, o valor é disponibilizado em dinheiro, banco ou carteira móvel." }
+      {
+        "title": "Faça o pedido",
+        "text": "Preencha o formulário online em poucos minutos."
+      },
+      {
+        "title": "Análise",
+        "text": "A nossa equipa analisa o pedido e contacta-o por telefone."
+      },
+      {
+        "title": "Documentos",
+        "text": "Apresente os documentos no nosso escritório na Av. Agostinho Neto."
+      },
+      {
+        "title": "Receba o crédito",
+        "text": "Após aprovação, o valor é disponibilizado."
+      }
     ]
   },
   "about": {
     "title": "Sobre a NRP",
-    "text": "A NRP Microcrédito apoia moçambicanos que querem crescer: comerciantes, trabalhadores e famílias. Acreditamos em crédito responsável, com condições explicadas de forma simples e um atendimento próximo."
+    "text": "A NRP Microcrédito é a sua escolha responsável. Apoiamos o seu crescimento financeiro com soluções de crédito ágeis e transparentes, com condições claras desde o primeiro contacto."
   },
   "contact": {
-    "title": "Fale connosco",
-    "phone": "Telefone",
+    "title": "Contactos",
+    "phone": "Telefones",
     "whatsapp": "WhatsApp",
     "email": "Email",
     "address": "Morada",
-    "hours": "Horário"
+    "hours": "Horário",
+    "subtitle": "Entre em contacto com a nossa equipa para mais informações."
   },
   "apply": {
     "title": "Pedido de crédito",
-    "subtitle": "Preencha os seus dados. Entraremos em contacto para continuar o processo. Este pedido não é uma aprovação automática.",
+    "subtitle": "Preencha os seus dados e entraremos em contacto. Depois apresente os documentos no nosso escritório. Este pedido não é uma aprovação automática.",
     "sections": {
       "personal": "Dados pessoais",
       "loan": "Sobre o crédito"
@@ -92,9 +153,9 @@
       "gt50k": "Mais de 50.000 MZN"
     },
     "productOptions": {
-      "business": "Crédito Negócio",
-      "salary": "Crédito Salário",
-      "emergency": "Crédito Emergência"
+      "personal": "Crédito Pessoal",
+      "business": "Crédito para Negócios",
+      "entrepreneur": "Incentivo ao Empreendedor"
     },
     "select": "Seleccione…",
     "submit": "Enviar pedido",
@@ -113,7 +174,8 @@
       "amount": "Indique um montante entre 1.000 e 500.000 MZN.",
       "term": "Indique um prazo entre 1 e 24 meses.",
       "purpose": "Descreva brevemente a finalidade (mínimo 10 caracteres).",
-      "consent": "É necessário aceitar para continuar."
+      "consent": "É necessário aceitar para continuar.",
+      "amountBusiness": "O Crédito para Negócios vai de 30.000 a 70.000 MZN."
     }
   },
   "admin": {

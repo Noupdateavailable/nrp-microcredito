@@ -5,7 +5,7 @@ import { hasLocale, type Locale } from "@/i18n/config";
 import { getDictionary, type Dictionary } from "@/i18n/get-dictionary";
 import { getStaff } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
-import { STATUSES, type Status } from "@/lib/loan-schema";
+import { STATUSES, type Product, type Status } from "@/lib/loan-schema";
 import { logout, updateStatus } from "./actions";
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
@@ -18,7 +18,7 @@ type Row = {
   email: string | null;
   city: string;
   occupation: string;
-  product: "business" | "salary" | "emergency";
+  product: Product;
   amount_mzn: number;
   term_months: number;
   purpose: string;

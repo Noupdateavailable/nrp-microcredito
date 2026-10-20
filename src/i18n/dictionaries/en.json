@@ -1,72 +1,133 @@
 {
   "meta": {
-    "title": "NRP Microcredit — Fast, fair credit in Mozambique",
-    "description": "Microcredit for small businesses, workers and families in Mozambique. Apply online in a few minutes."
+    "title": "NRP Microcredit — Your responsible choice",
+    "description": "Personal loans, business credit and entrepreneur support in Maputo. Fast, transparent solutions. Apply online."
   },
   "nav": {
     "home": "Home",
-    "products": "Products",
-    "how": "How it works",
+    "products": "Loans",
+    "how": "Requirements",
     "about": "About us",
     "contact": "Contact",
     "apply": "Apply now",
     "switchLanguage": "Português"
   },
   "hero": {
-    "eyebrow": "Microcredit in Mozambique",
-    "title": "The right credit to grow your business",
-    "subtitle": "Amounts that fit you, clear repayments and a fast answer. No unnecessary paperwork.",
+    "eyebrow": "Microcredit in Maputo",
+    "title": "Your responsible choice.",
+    "subtitle": "Supporting your financial growth with fast, transparent solutions, at rates between 20% and 25% per month.",
     "primary": "Apply for credit",
     "secondary": "Chat on WhatsApp",
     "stats": [
-      { "value": "48h", "label": "Answer to your request" },
-      { "value": "100%", "label": "Transparent terms" },
-      { "value": "MZN", "label": "Credit in meticais" }
+      {
+        "value": "18–25%",
+        "label": "Monthly interest rate"
+      },
+      {
+        "value": "Movable assets",
+        "label": "As collateral"
+      },
+      {
+        "value": "Mon–Fri",
+        "label": "08:00 – 19:00"
+      }
     ]
   },
   "products": {
-    "title": "Our products",
-    "subtitle": "Choose the credit that best fits your need.",
+    "title": "Loans",
+    "subtitle": "Choose the credit solution that fits your needs.",
+    "labels": {
+      "rate": "Interest rate",
+      "perMonth": "per month",
+      "amount": "Amount",
+      "guarantee": "Collateral",
+      "documents": "Documents to bring"
+    },
+    "guarantee": "Movable assets",
     "items": [
       {
+        "key": "personal",
+        "name": "Personal Loan",
+        "description": "Tailored financial solutions for your specific needs, delivered quickly and efficiently.",
+        "rate": "25%",
+        "amount": "",
+        "docs": [
+          "Identity card (BI)",
+          "NUIT (tax number)"
+        ]
+      },
+      {
+        "key": "business",
         "name": "Business Credit",
-        "description": "For traders and small entrepreneurs who need stock, equipment or working capital."
+        "description": "Strategic financial support to grow your business activities sustainably.",
+        "rate": "20% – 25%",
+        "amount": "30,000 – 70,000 MZN",
+        "docs": [
+          "Identity card (BI)",
+          "NUIT (tax number)",
+          "Business licence (Alvará)",
+          "Commercial certificate"
+        ]
       },
       {
-        "name": "Salary Credit",
-        "description": "For workers with a regular income who need support for one-off expenses."
-      },
-      {
-        "name": "Emergency Credit",
-        "description": "Smaller amounts, faster approval, for unexpected health, school or family costs."
+        "key": "entrepreneur",
+        "name": "Entrepreneur Incentive",
+        "description": "We make credit easier to access so you can turn your plans into reality.",
+        "rate": "18%",
+        "amount": "",
+        "docs": [
+          "Identity card (BI)",
+          "NUIT (tax number)"
+        ]
       }
     ],
     "cta": "Apply for this credit"
   },
   "how": {
-    "title": "How it works",
+    "title": "Requirements",
+    "subtitle": "General documents for any credit request:",
+    "requirements": [
+      "Identity card (BI)",
+      "NUIT (tax number)",
+      "Bank statement for the last 3 months",
+      "Proof of income"
+    ],
+    "stepsTitle": "How it works",
     "steps": [
-      { "title": "Apply", "text": "Fill in the online form in a few minutes." },
-      { "title": "Review", "text": "Our team reviews your request and calls you." },
-      { "title": "Documents", "text": "Bring the required documents to one of our branches." },
-      { "title": "Get your credit", "text": "Once approved, the money is paid in cash, to your bank or mobile wallet." }
+      {
+        "title": "Apply",
+        "text": "Fill in the online form in a few minutes."
+      },
+      {
+        "title": "Review",
+        "text": "Our team reviews your request and calls you."
+      },
+      {
+        "title": "Documents",
+        "text": "Bring your documents to our office on Av. Agostinho Neto."
+      },
+      {
+        "title": "Get your credit",
+        "text": "Once approved, the money is paid out."
+      }
     ]
   },
   "about": {
     "title": "About NRP",
-    "text": "NRP Microcredit supports Mozambicans who want to grow: traders, workers and families. We believe in responsible lending, with terms explained simply and personal service."
+    "text": "NRP Microcredit is your responsible choice. We support your financial growth with fast, transparent credit solutions and clear terms from the very first conversation."
   },
   "contact": {
-    "title": "Get in touch",
-    "phone": "Phone",
+    "title": "Contact",
+    "phone": "Phones",
     "whatsapp": "WhatsApp",
     "email": "Email",
     "address": "Address",
-    "hours": "Opening hours"
+    "hours": "Opening hours",
+    "subtitle": "Get in touch with our team for more information."
   },
   "apply": {
     "title": "Credit application",
-    "subtitle": "Fill in your details and we will contact you to continue. Submitting this form is not an automatic approval.",
+    "subtitle": "Fill in your details and we will contact you. You then bring your documents to our office. Submitting this form is not an automatic approval.",
     "sections": {
       "personal": "Personal details",
       "loan": "About the credit"
@@ -92,9 +153,9 @@
       "gt50k": "Over 50,000 MZN"
     },
     "productOptions": {
+      "personal": "Personal Loan",
       "business": "Business Credit",
-      "salary": "Salary Credit",
-      "emergency": "Emergency Credit"
+      "entrepreneur": "Entrepreneur Incentive"
     },
     "select": "Select…",
     "submit": "Send request",
@@ -113,7 +174,8 @@
       "amount": "Enter an amount between 1,000 and 500,000 MZN.",
       "term": "Enter a term between 1 and 24 months.",
       "purpose": "Briefly describe the purpose (at least 10 characters).",
-      "consent": "You must agree to continue."
+      "consent": "You must agree to continue.",
+      "amountBusiness": "Business Credit ranges from 30,000 to 70,000 MZN."
     }
   },
   "admin": {

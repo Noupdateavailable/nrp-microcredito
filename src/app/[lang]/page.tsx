@@ -2,15 +2,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { site, whatsappLink } from "@/config/site";
+import { site, telHref, whatsappLink } from "@/config/site";
 
-const productKeys = ["business", "salary", "emergency"] as const;
-const productIcons = ["🏪", "💼", "⚡"];
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
+  const L = dict.products.labels;
 
   return (
     <>
@@ -40,9 +39,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
               </a>
             </div>
           </div>
-          <dl className="grid grid-cols-3 gap-3 self-end md:grid-cols-1">
+          <dl className="grid gap-3 self-end sm:grid-cols-3 md:grid-cols-1">
             {dict.hero.stats.map((s) => (
-              <div key={s.label} className="rounded-2xl bg-white p-4 text-brand-blue shadow-lg md:p-5">
+              <div key={s.label} className="flex items-center justify-between gap-3 rounded-2xl bg-white p-4 text-brand-blue shadow-lg sm:block md:p-5">
                 <dt className="text-xs font-medium text-muted md:text-sm">{s.label}</dt>
                 <dd className="text-2xl font-extrabold text-brand-red md:text-3xl">{s.value}</dd>
               </div>
@@ -57,21 +56,40 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           <h2 className="text-3xl font-extrabold text-brand-blue">{dict.products.title}</h2>
           <p className="mt-2 text-muted">{dict.products.subtitle}</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {dict.products.items.map((p, i) => (
+            {dict.products.items.map((p) => (
               <article
-                key={p.name}
-                className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                key={p.key}
+                className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
               >
-                <span aria-hidden className="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-brand-sky text-2xl">
-                  {productIcons[i]}
-                </span>
                 <h3 className="text-xl font-bold text-brand-blue">{p.name}</h3>
-                <p className="mt-2 flex-1 text-muted">{p.description}</p>
-                <Link
-                  href={`/${lang}/apply?product=${productKeys[i]}`}
-                  className="mt-6 font-semibold text-brand-red hover:underline"
-                >
-                  {dict.products.cta} →
+                <p className="mt-2 text-muted">{p.description}</p>
+                <div className="mt-5 rounded-xl bg-brand-sky p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted">{L.rate}</p>
+                  <p className="text-3xl font-extrabold text-brand-red">
+                    {p.rate} <span className="text-sm font-semibold text-muted">{L.perMonth}</span>
+                  </p>
+                  {p.amount && (
+                    <p className="mt-2 text-sm text-ink">
+                      <span className="text-muted">{L.amount}: </span>
+                      <strong>{p.amount}</strong>
+                    </p>
+                  )}
+                  <p className="mt-1 text-sm text-ink">
+                    <span className="text-muted">{L.guarantee}: </span>
+                    <strong>{dict.products.guarantee}</strong>
+                  </p>
+                </div>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-wide text-muted">{L.documents}</p>
+                <ul className="mt-2 flex-1 space-y-1.5 text-sm text-ink">
+                  {p.docs.map((d) => (
+                    <li key={d} className="flex gap-2">
+                      <span aria-hidden className="font-bold text-brand-red">✓</span>
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+                <Link href={`/${lang}/apply?product=${p.key}`} className="btn-red mt-6">
+                  {dict.products.cta}
                 </Link>
               </article>
             ))}
@@ -79,21 +97,33 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Requirements + how it works */}
       <section id="how" className="scroll-mt-20 bg-brand-sky px-4 py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-extrabold text-brand-blue">{dict.how.title}</h2>
-          <ol className="mt-10 grid gap-6 md:grid-cols-4">
-            {dict.how.steps.map((s, i) => (
-              <li key={s.title} className="rounded-2xl bg-white p-6 shadow-sm">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-red font-bold text-white">
-                  {i + 1}
-                </span>
-                <h3 className="mt-4 font-bold text-brand-blue">{s.title}</h3>
-                <p className="mt-1 text-sm text-muted">{s.text}</p>
-              </li>
-            ))}
-          </ol>
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.6fr]">
+          <div>
+            <h2 className="text-3xl font-extrabold text-brand-blue">{dict.how.title}</h2>
+            <p className="mt-2 text-muted">{dict.how.subtitle}</p>
+            <ul className="mt-6 space-y-3">
+              {dict.how.requirements.map((r) => (
+                <li key={r} className="flex items-center gap-3 rounded-xl bg-white p-4 font-semibold text-brand-blue shadow-sm">
+                  <span aria-hidden className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-red text-sm text-white">✓</span>
+                  {r}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-3xl font-extrabold text-brand-blue">{dict.how.stepsTitle}</h2>
+            <ol className="mt-6 grid gap-4 sm:grid-cols-2">
+              {dict.how.steps.map((s, i) => (
+                <li key={s.title} className="rounded-2xl bg-white p-5 shadow-sm">
+                  <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-blue font-bold text-white">{i + 1}</span>
+                  <h3 className="mt-3 font-bold text-brand-blue">{s.title}</h3>
+                  <p className="mt-1 text-sm text-muted">{s.text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
@@ -120,15 +150,18 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <section id="contact" className="scroll-mt-20 bg-brand-sky px-4 py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-extrabold text-brand-blue">{dict.contact.title}</h2>
+          <p className="mt-2 text-muted">{dict.contact.subtitle}</p>
           <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <ContactItem label={dict.contact.phone}>
-              <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="hover:text-brand-red">
-                {site.phone}
-              </a>
+              {site.phones.map((ph) => (
+                <a key={ph} href={telHref(ph)} className="block hover:text-brand-red">
+                  {ph}
+                </a>
+              ))}
             </ContactItem>
             <ContactItem label={dict.contact.whatsapp}>
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hover:text-brand-red">
-                {site.phone}
+                {site.phones[0]}
               </a>
             </ContactItem>
             <ContactItem label={dict.contact.email}>

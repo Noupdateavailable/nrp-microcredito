@@ -1,6 +1,8 @@
 import { z } from "zod";
 
-export const PRODUCTS = ["business", "salary", "emergency"] as const;
+export const PRODUCTS = ["personal", "business", "entrepreneur"] as const;
+export const BUSINESS_MIN = 30000;
+export const BUSINESS_MAX = 70000;
 export const INCOME_BANDS = ["lt10k", "10to25k", "25to50k", "gt50k"] as const;
 export const STATUSES = ["new", "reviewing", "approved", "rejected"] as const;
 
@@ -34,6 +36,9 @@ export const loanApplicationSchema = z.object({
   term: z.coerce.number({ error: "term" }).int("term").min(1, "term").max(24, "term"),
   purpose: z.string().trim().min(10, "purpose").max(1000, "purpose"),
   consent: z.literal("on", { error: "consent" }),
-});
+}).refine(
+  (d) => d.product !== "business" || (d.amount >= BUSINESS_MIN && d.amount <= BUSINESS_MAX),
+  { message: "amountBusiness", path: ["amount"] },
+);
 
 export type LoanApplicationInput = z.input<typeof loanApplicationSchema>;

@@ -1,13 +1,15 @@
 // Business contact details shown on the site.
-// TODO(NRP): replace every placeholder below with the real details.
 export const site = {
   name: "NRP Microcrédito",
-  phone: "+258 84 000 0000", // TODO
-  whatsapp: "258840000000", // TODO: digits only, with country code, for wa.me links
-  email: "info@nrp.co.mz", // TODO
-  address: "Av. 24 de Julho, Maputo", // TODO
-  hours: { pt: "Seg–Sex 08:00–17:00, Sáb 08:00–12:00", en: "Mon–Fri 08:00–17:00, Sat 08:00–12:00" }, // TODO
+  legalName: "NRP Microcrédito E.I",
+  phones: ["+258 84 280 5988", "+258 87 387 8534"],
+  whatsapp: "258842805988", // digits only, used for wa.me links — confirm this is the WhatsApp number
+  email: "nrp.microcredito@gmail.com",
+  address: "Av. Agostinho Neto, 936, Maputo",
+  hours: { pt: "Seg–Sex, 08:00–19:00", en: "Mon–Fri, 08:00–19:00" },
 };
 
 export const whatsappLink = (text?: string) =>
   `https://wa.me/${site.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
+
+export const telHref = (phone: string) => `tel:${phone.replace(/\s/g, "")}`;
