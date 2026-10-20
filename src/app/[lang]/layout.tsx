@@ -9,7 +9,7 @@ import "../globals.css";
 
 // Plus Jakarta Sans (SIL OFL), self-hosted so no request goes to Google at runtime or build.
 const jakarta = localFont({
-  src: "../fonts/plus-jakarta-sans-latin-wght-normal.woff2",
+  src: "../fonts/jakarta.woff2",
   weight: "200 800",
   variable: "--font-jakarta",
   display: "swap",
