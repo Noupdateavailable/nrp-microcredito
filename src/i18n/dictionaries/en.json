@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "NRP Microcredit — Fast, fair credit in Mozambique",
+    "description": "Microcredit for small businesses, workers and families in Mozambique. Apply online in a few minutes."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "how": "How it works",
+    "about": "About us",
+    "contact": "Contact",
+    "apply": "Apply now",
+    "switchLanguage": "Português"
+  },
+  "hero": {
+    "eyebrow": "Microcredit in Mozambique",
+    "title": "The right credit to grow your business",
+    "subtitle": "Amounts that fit you, clear repayments and a fast answer. No unnecessary paperwork.",
+    "primary": "Apply for credit",
+    "secondary": "Chat on WhatsApp",
+    "stats": [
+      { "value": "48h", "label": "Answer to your request" },
+      { "value": "100%", "label": "Transparent terms" },
+      { "value": "MZN", "label": "Credit in meticais" }
+    ]
+  },
+  "products": {
+    "title": "Our products",
+    "subtitle": "Choose the credit that best fits your need.",
+    "items": [
+      {
+        "name": "Business Credit",
+        "description": "For traders and small entrepreneurs who need stock, equipment or working capital."
+      },
+      {
+        "name": "Salary Credit",
+        "description": "For workers with a regular income who need support for one-off expenses."
+      },
+      {
+        "name": "Emergency Credit",
+        "description": "Smaller amounts, faster approval, for unexpected health, school or family costs."
+      }
+    ],
+    "cta": "Apply for this credit"
+  },
+  "how": {
+    "title": "How it works",
+    "steps": [
+      { "title": "Apply", "text": "Fill in the online form in a few minutes." },
+      { "title": "Review", "text": "Our team reviews your request and calls you." },
+      { "title": "Documents", "text": "Bring the required documents to one of our branches." },
+      { "title": "Get your credit", "text": "Once approved, the money is paid in cash, to your bank or mobile wallet." }
+    ]
+  },
+  "about": {
+    "title": "About NRP",
+    "text": "NRP Microcredit supports Mozambicans who want to grow: traders, workers and families. We believe in responsible lending, with terms explained simply and personal service."
+  },
+  "contact": {
+    "title": "Get in touch",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Opening hours"
+  },
+  "apply": {
+    "title": "Credit application",
+    "subtitle": "Fill in your details and we will contact you to continue. Submitting this form is not an automatic approval.",
+    "sections": {
+      "personal": "Personal details",
+      "loan": "About the credit"
+    },
+    "fields": {
+      "fullName": "Full name",
+      "phone": "Phone",
+      "phoneHint": "e.g. 84 123 4567",
+      "email": "Email (optional)",
+      "city": "City / District",
+      "occupation": "Occupation or type of business",
+      "monthlyIncome": "Approximate monthly income",
+      "product": "Credit type",
+      "amount": "Amount requested (MZN)",
+      "term": "Term (months)",
+      "purpose": "What will you use the credit for?",
+      "consent": "I authorise NRP Microcredit to use this information to review my request and to contact me."
+    },
+    "incomeOptions": {
+      "lt10k": "Under 10,000 MZN",
+      "10to25k": "10,000 – 25,000 MZN",
+      "25to50k": "25,000 – 50,000 MZN",
+      "gt50k": "Over 50,000 MZN"
+    },
+    "productOptions": {
+      "business": "Business Credit",
+      "salary": "Salary Credit",
+      "emergency": "Emergency Credit"
+    },
+    "select": "Select…",
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "successTitle": "Request received!",
+    "successText": "Thank you. Our team will call you soon on the number you provided.",
+    "errors": {
+      "generic": "We couldn't send your request. Please try again or contact us on WhatsApp.",
+      "fullName": "Please enter your full name.",
+      "phone": "Enter a valid Mozambican number (9 digits starting with 8).",
+      "email": "Invalid email.",
+      "city": "Please enter your city or district.",
+      "occupation": "Please enter your occupation.",
+      "monthlyIncome": "Please choose an option.",
+      "product": "Please choose a credit type.",
+      "amount": "Enter an amount between 1,000 and 500,000 MZN.",
+      "term": "Enter a term between 1 and 24 months.",
+      "purpose": "Briefly describe the purpose (at least 10 characters).",
+      "consent": "You must agree to continue."
+    }
+  },
+  "admin": {
+    "title": "Credit applications",
+    "loginTitle": "Staff area",
+    "email": "Email",
+    "password": "Password",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "loginError": "Invalid credentials or no access permission.",
+    "notAdmin": "Your account does not have permission to view this page.",
+    "empty": "No applications yet.",
+    "loading": "Loading applications…",
+    "columns": {
+      "date": "Date",
+      "name": "Name",
+      "phone": "Phone",
+      "product": "Product",
+      "amount": "Amount",
+      "term": "Term",
+      "status": "Status"
+    },
+    "status": {
+      "new": "New",
+      "reviewing": "Reviewing",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "update": "Update"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "staff": "Staff area"
+  }
+}

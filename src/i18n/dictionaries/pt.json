@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "NRP Microcrédito — Crédito rápido e justo em Moçambique",
+    "description": "Microcrédito para pequenos negócios, trabalhadores e famílias em Moçambique. Peça o seu crédito online em poucos minutos."
+  },
+  "nav": {
+    "home": "Início",
+    "products": "Produtos",
+    "how": "Como funciona",
+    "about": "Sobre nós",
+    "contact": "Contacto",
+    "apply": "Pedir crédito",
+    "switchLanguage": "English"
+  },
+  "hero": {
+    "eyebrow": "Microcrédito em Moçambique",
+    "title": "O crédito certo para fazer crescer o seu negócio",
+    "subtitle": "Valores à sua medida, prestações claras e resposta rápida. Sem burocracia desnecessária.",
+    "primary": "Pedir crédito agora",
+    "secondary": "Falar no WhatsApp",
+    "stats": [
+      { "value": "48h", "label": "Resposta ao pedido" },
+      { "value": "100%", "label": "Condições transparentes" },
+      { "value": "MZN", "label": "Crédito em meticais" }
+    ]
+  },
+  "products": {
+    "title": "Os nossos produtos",
+    "subtitle": "Escolha o crédito que melhor se adapta à sua necessidade.",
+    "items": [
+      {
+        "name": "Crédito Negócio",
+        "description": "Para comerciantes e pequenos empreendedores que precisam de stock, equipamento ou capital de giro."
+      },
+      {
+        "name": "Crédito Salário",
+        "description": "Para trabalhadores com rendimento fixo que precisam de apoio para despesas pontuais."
+      },
+      {
+        "name": "Crédito Emergência",
+        "description": "Montantes menores, aprovação mais rápida, para imprevistos de saúde, escola ou família."
+      }
+    ],
+    "cta": "Pedir este crédito"
+  },
+  "how": {
+    "title": "Como funciona",
+    "steps": [
+      { "title": "Faça o pedido", "text": "Preencha o formulário online em poucos minutos." },
+      { "title": "Análise", "text": "A nossa equipa analisa o pedido e contacta-o por telefone." },
+      { "title": "Documentos", "text": "Apresente os documentos necessários num dos nossos balcões." },
+      { "title": "Receba o crédito", "text": "Após aprovação, o valor é disponibilizado em dinheiro, banco ou carteira móvel." }
+    ]
+  },
+  "about": {
+    "title": "Sobre a NRP",
+    "text": "A NRP Microcrédito apoia moçambicanos que querem crescer: comerciantes, trabalhadores e famílias. Acreditamos em crédito responsável, com condições explicadas de forma simples e um atendimento próximo."
+  },
+  "contact": {
+    "title": "Fale connosco",
+    "phone": "Telefone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Morada",
+    "hours": "Horário"
+  },
+  "apply": {
+    "title": "Pedido de crédito",
+    "subtitle": "Preencha os seus dados. Entraremos em contacto para continuar o processo. Este pedido não é uma aprovação automática.",
+    "sections": {
+      "personal": "Dados pessoais",
+      "loan": "Sobre o crédito"
+    },
+    "fields": {
+      "fullName": "Nome completo",
+      "phone": "Telefone",
+      "phoneHint": "Ex.: 84 123 4567",
+      "email": "Email (opcional)",
+      "city": "Cidade / Distrito",
+      "occupation": "Ocupação ou tipo de negócio",
+      "monthlyIncome": "Rendimento mensal aproximado",
+      "product": "Tipo de crédito",
+      "amount": "Montante pretendido (MZN)",
+      "term": "Prazo (meses)",
+      "purpose": "Para que vai usar o crédito?",
+      "consent": "Autorizo a NRP Microcrédito a usar estes dados para analisar o meu pedido e a contactar-me."
+    },
+    "incomeOptions": {
+      "lt10k": "Menos de 10.000 MZN",
+      "10to25k": "10.000 – 25.000 MZN",
+      "25to50k": "25.000 – 50.000 MZN",
+      "gt50k": "Mais de 50.000 MZN"
+    },
+    "productOptions": {
+      "business": "Crédito Negócio",
+      "salary": "Crédito Salário",
+      "emergency": "Crédito Emergência"
+    },
+    "select": "Seleccione…",
+    "submit": "Enviar pedido",
+    "submitting": "A enviar…",
+    "successTitle": "Pedido recebido!",
+    "successText": "Obrigado. A nossa equipa vai contactá-lo em breve pelo telefone indicado.",
+    "errors": {
+      "generic": "Não foi possível enviar o pedido. Tente novamente ou contacte-nos pelo WhatsApp.",
+      "fullName": "Indique o seu nome completo.",
+      "phone": "Indique um número moçambicano válido (9 dígitos, começando por 8).",
+      "email": "Email inválido.",
+      "city": "Indique a cidade ou distrito.",
+      "occupation": "Indique a sua ocupação.",
+      "monthlyIncome": "Seleccione uma opção.",
+      "product": "Seleccione o tipo de crédito.",
+      "amount": "Indique um montante entre 1.000 e 500.000 MZN.",
+      "term": "Indique um prazo entre 1 e 24 meses.",
+      "purpose": "Descreva brevemente a finalidade (mínimo 10 caracteres).",
+      "consent": "É necessário aceitar para continuar."
+    }
+  },
+  "admin": {
+    "title": "Pedidos de crédito",
+    "loginTitle": "Área da equipa",
+    "email": "Email",
+    "password": "Palavra-passe",
+    "login": "Entrar",
+    "logout": "Sair",
+    "loginError": "Credenciais inválidas ou sem permissão de acesso.",
+    "notAdmin": "A sua conta não tem permissão para ver esta página.",
+    "empty": "Ainda não há pedidos.",
+    "loading": "A carregar pedidos…",
+    "columns": {
+      "date": "Data",
+      "name": "Nome",
+      "phone": "Telefone",
+      "product": "Produto",
+      "amount": "Montante",
+      "term": "Prazo",
+      "status": "Estado"
+    },
+    "status": {
+      "new": "Novo",
+      "reviewing": "Em análise",
+      "approved": "Aprovado",
+      "rejected": "Recusado"
+    },
+    "update": "Actualizar"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "staff": "Área da equipa"
+  }
+}
