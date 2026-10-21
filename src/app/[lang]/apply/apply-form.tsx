@@ -13,7 +13,11 @@ export function ApplyForm({ t, lang }: { t: T; lang: Locale }) {
   const [state, action, pending] = useActionState<ApplyState, FormData>(submitApplication, {
     status: "idle",
   });
-  const preselected = useSearchParams().get("product") ?? "";
+  // Answers carried over from the simulator or the quick form on the home page.
+  const query = useSearchParams();
+  const pre = (k: string) => query.get(k)?.trim().slice(0, 200) || undefined;
+  const preselected = pre("product") ?? "";
+  const prePhone = pre("phone")?.replace(/^\+?258\s*/, "");
 
   if (state.status === "success") {
     return (
@@ -51,7 +55,7 @@ export function ApplyForm({ t, lang }: { t: T; lang: Locale }) {
       <fieldset className="grid gap-5 sm:grid-cols-2">
         <legend className="mb-4 text-lg font-bold text-brand-blue">{t.sections.personal}</legend>
         <Field label={t.fields.fullName} name="fullName" error={err("fullName")} className="sm:col-span-2">
-          <input id="fullName" name="fullName" autoComplete="name" required defaultValue={values.fullName} className="field" />
+          <input id="fullName" name="fullName" autoComplete="name" required defaultValue={values.fullName ?? pre("fullName")} className="field" />
         </Field>
         <Field label={t.fields.phone} name="phone" error={err("phone")}>
           <div className="flex">
@@ -64,7 +68,7 @@ export function ApplyForm({ t, lang }: { t: T; lang: Locale }) {
               autoComplete="tel-national"
               placeholder={t.fields.phoneHint}
               required
-              defaultValue={values.phone}
+              defaultValue={values.phone ?? prePhone}
               className="field rounded-l-none"
             />
           </div>
@@ -113,10 +117,10 @@ export function ApplyForm({ t, lang }: { t: T; lang: Locale }) {
           </select>
         </Field>
         <Field label={t.fields.amount} name="amount" error={err("amount")}>
-          <input id="amount" name="amount" type="number" inputMode="numeric" min={1000} max={500000} step={500} required defaultValue={values.amount} className="field" />
+          <input id="amount" name="amount" type="number" inputMode="numeric" min={1000} max={500000} step={500} required defaultValue={values.amount ?? pre("amount")} className="field" />
         </Field>
         <Field label={t.fields.term} name="term" error={err("term")}>
-          <input id="term" name="term" type="number" inputMode="numeric" min={1} max={24} required defaultValue={values.term} className="field" />
+          <input id="term" name="term" type="number" inputMode="numeric" min={1} max={24} required defaultValue={values.term ?? pre("term")} className="field" />
         </Field>
         <Field label={t.fields.purpose} name="purpose" error={err("purpose")} className="sm:col-span-2">
           <textarea id="purpose" name="purpose" rows={4} required maxLength={1000} defaultValue={values.purpose} className="field" />

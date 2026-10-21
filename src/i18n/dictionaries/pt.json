@@ -1,41 +1,77 @@
 {
   "meta": {
     "title": "NRP Microcrédito — Sua escolha responsável",
-    "description": "Crédito pessoal, crédito para negócios e incentivo ao empreendedor em Maputo. Soluções ágeis e transparentes. Peça o seu crédito online."
+    "description": "Crédito pessoal, crédito para negócios e incentivo ao empreendedor em Maputo. Taxas de 18% a 25% ao mês. Peça o seu crédito online."
+  },
+  "topbar": {
+    "tagline": "Sua escolha responsável",
+    "hours": "Segunda a sexta, 08:00–19:00",
+    "phones": "Linha de apoio"
   },
   "nav": {
     "home": "Início",
-    "products": "Empréstimos",
-    "how": "Requisitos",
+    "loans": "Créditos",
+    "how": "Como funciona",
+    "requirements": "Requisitos",
     "about": "Sobre nós",
-    "contact": "Contactos",
+    "contact": "Contacto",
     "apply": "Pedir crédito",
-    "switchLanguage": "English"
+    "switchLanguage": "English",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "menu": "Menu",
+    "mainMenu": "Menu principal"
   },
   "hero": {
-    "eyebrow": "Microcrédito em Maputo",
+    "badge": "Microcrédito em Maputo",
+    "titleStart": "Sua escolha",
+    "titleHighlight": "responsável.",
     "title": "Sua escolha responsável.",
     "subtitle": "Apoiando o seu crescimento financeiro com soluções ágeis e transparentes, com taxas entre 20% e 25% mensal.",
     "primary": "Pedir crédito agora",
-    "secondary": "Falar no WhatsApp",
+    "secondary": "Ver como funciona",
     "stats": [
       {
         "value": "18–25%",
         "label": "Taxa de juro mensal"
       },
       {
-        "value": "Bens móveis",
-        "label": "Como garantia"
+        "value": "30.000–70.000 MZN",
+        "label": "Crédito para negócios"
       },
       {
-        "value": "Seg–Sex",
-        "label": "08:00 – 19:00"
+        "value": "Bens móveis",
+        "label": "Como garantia"
       }
     ]
   },
+  "sim": {
+    "title": "Simule o seu crédito",
+    "subtitle": "Escolha o crédito, o valor e o prazo.",
+    "product": "Tipo de crédito",
+    "amount": "Valor (MZN)",
+    "term": "Prazo",
+    "month": "mês",
+    "months": "meses",
+    "monthly": "Prestação mensal estimada",
+    "total": "Total a pagar",
+    "rate": "Taxa",
+    "perMonth": "ao mês",
+    "to": "a",
+    "cta": "Quero este crédito",
+    "note": "Simulação indicativa, com juros simples sobre o valor pedido. As condições finais são confirmadas na análise do pedido."
+  },
+  "ticker": [
+    "Crédito Pessoal",
+    "Soluções de Crédito para Negócios",
+    "Incentivo ao Empreendedor",
+    "Taxas de 18% a 25% ao mês",
+    "Garantia em bens móveis",
+    "Pedido online"
+  ],
   "products": {
-    "title": "Empréstimos",
-    "subtitle": "Escolha a solução de crédito que se adapta às suas necessidades.",
+    "eyebrow": "Os nossos créditos",
+    "title": "Um crédito para cada necessidade",
     "labels": {
       "rate": "Taxa de juro",
       "perMonth": "ao mês",
@@ -44,6 +80,8 @@
       "documents": "Documentos a apresentar"
     },
     "guarantee": "Bens móveis",
+    "simulate": "Simular",
+    "apply": "Pedir este crédito",
     "items": [
       {
         "key": "personal",
@@ -54,7 +92,8 @@
         "docs": [
           "Bilhete de Identidade (BI)",
           "NUIT"
-        ]
+        ],
+        "short": "Pessoal"
       },
       {
         "key": "business",
@@ -67,7 +106,8 @@
           "NUIT",
           "Alvará",
           "Certidão Comercial"
-        ]
+        ],
+        "short": "Negócios"
       },
       {
         "key": "entrepreneur",
@@ -78,52 +118,153 @@
         "docs": [
           "Bilhete de Identidade (BI)",
           "NUIT"
-        ]
+        ],
+        "short": "Empreendedor"
       }
-    ],
-    "cta": "Pedir este crédito"
+    ]
   },
   "how": {
-    "title": "Requisitos",
-    "subtitle": "Documentos gerais para qualquer pedido de crédito:",
-    "requirements": [
+    "eyebrow": "Como funciona",
+    "title": "Do pedido ao crédito em 4 passos",
+    "steps": [
+      {
+        "title": "Faça o pedido",
+        "text": "Online, aqui no site, ou pelo WhatsApp +258 87 387 8534."
+      },
+      {
+        "title": "Análise",
+        "text": "A nossa equipa analisa o pedido e liga-lhe para explicar as condições."
+      },
+      {
+        "title": "Entregue os documentos",
+        "text": "Apresente os documentos no nosso escritório na Av. Agostinho Neto, 662."
+      },
+      {
+        "title": "Receba o crédito",
+        "text": "Após a aprovação, o valor é disponibilizado."
+      }
+    ]
+  },
+  "requirements": {
+    "eyebrow": "Requisitos",
+    "title": "O que precisa para pedir",
+    "text": "Documentos gerais para qualquer pedido de crédito. Se tiver dúvidas sobre algum documento, fale connosco antes de vir ao escritório.",
+    "items": [
       "Bilhete de Identidade (BI)",
       "NUIT",
       "Extrato bancário dos últimos 3 meses",
       "Declaração de rendimentos"
     ],
-    "stepsTitle": "Como funciona",
-    "steps": [
+    "business": "Para crédito a negócios: também Alvará e Certidão Comercial"
+  },
+  "about": {
+    "eyebrow": "Sobre nós",
+    "title": "Sua escolha responsável em Maputo",
+    "paragraphs": [
+      "A NRP Microcrédito apoia o seu crescimento financeiro com soluções de crédito ágeis e transparentes, com condições claras desde o primeiro contacto.",
+      "Trabalhamos com crédito pessoal, crédito para negócios e incentivo ao empreendedor, para que cada pessoa encontre a solução certa para os seus planos."
+    ],
+    "cards": [
       {
-        "title": "Faça o pedido",
-        "text": "Preencha o formulário online em poucos minutos."
+        "title": "Missão",
+        "text": "Apoiar o crescimento financeiro de pessoas e negócios com crédito ágil e responsável."
       },
       {
-        "title": "Análise",
-        "text": "A nossa equipa analisa o pedido e contacta-o por telefone."
+        "title": "Valores",
+        "text": "Transparência nas taxas, proximidade com o cliente e respeito pela capacidade de pagamento de cada pessoa."
       },
       {
-        "title": "Documentos",
-        "text": "Apresente os documentos no nosso escritório na Av. Agostinho Neto."
-      },
-      {
-        "title": "Receba o crédito",
-        "text": "Após aprovação, o valor é disponibilizado."
+        "title": "Onde estamos",
+        "text": "Av. Agostinho Neto, 662, Maputo. Segunda a sexta, das 08:00 às 19:00."
       }
     ]
   },
-  "about": {
-    "title": "Sobre a NRP",
-    "text": "A NRP Microcrédito é a sua escolha responsável. Apoiamos o seu crescimento financeiro com soluções de crédito ágeis e transparentes, com condições claras desde o primeiro contacto."
+  "trust": {
+    "title": "Crédito responsável e transparente",
+    "text": "Taxas claras desde o primeiro contacto: entre 18% e 25% ao mês, conforme o crédito. Fale connosco antes de decidir.",
+    "cta": "Falar com a nossa equipa"
   },
   "contact": {
-    "title": "Contactos",
-    "phone": "Telefones",
+    "eyebrow": "Contacto",
+    "title": "Peça já o seu crédito",
+    "text": "Deixe os seus dados e continue o pedido online. Depois, a nossa equipa liga-lhe.",
+    "office": "Escritório",
     "whatsapp": "WhatsApp",
     "email": "Email",
-    "address": "Morada",
     "hours": "Horário",
-    "subtitle": "Entre em contacto com a nossa equipa para mais informações."
+    "phones": "Telefones",
+    "quick": {
+      "name": "Nome completo",
+      "namePh": "O seu nome",
+      "phone": "Telemóvel",
+      "phonePh": "84 123 4567",
+      "product": "Tipo de crédito",
+      "amount": "Valor pretendido (MZN)",
+      "amountPh": "25 000",
+      "submit": "Continuar pedido",
+      "note": "Vai completar o pedido na página seguinte."
+    }
+  },
+  "talk": {
+    "eyebrow": "Fale connosco",
+    "title": "Tem perguntas? Nós contactamos.",
+    "text": "Deixe os seus dados e diga-nos como prefere ser contactado. Respondemos de segunda a sexta, das 08:00 às 19:00.",
+    "phone": "Telefone",
+    "callAndWa": "(chamada e WhatsApp)",
+    "openWa": "Abrir conversa no WhatsApp",
+    "address": "Morada",
+    "email": "Email",
+    "form": {
+      "firstName": "Nome",
+      "firstNamePh": "O seu nome",
+      "lastName": "Apelido",
+      "lastNamePh": "O seu apelido",
+      "company": "Nome da empresa",
+      "optional": "(opcional)",
+      "companyPh": "Ex.: Loja Esperança, Lda.",
+      "email": "Email",
+      "emailPh": "nome@exemplo.co.mz",
+      "phone": "Número de telefone",
+      "phonePh": "84 123 4567",
+      "channel": "Qual a melhor forma de o contactar?",
+      "channels": {
+        "call": "Chamada",
+        "whatsapp": "WhatsApp",
+        "sms": "SMS",
+        "email": "Email"
+      },
+      "submit": "Enviar mensagem",
+      "sending": "A enviar…",
+      "privacy": "Os seus dados são usados apenas para responder ao seu contacto."
+    },
+    "success": {
+      "title": "Mensagem enviada com sucesso!",
+      "text": "Obrigado por contactar a NRP Microcrédito. Vamos responder pela forma que escolheu, de segunda a sexta, das 08:00 às 19:00.",
+      "urgent": "Se precisar de ajuda imediata, ligue",
+      "or": "ou",
+      "again": "Enviar outra mensagem"
+    },
+    "errors": {
+      "generic": "Não foi possível enviar a mensagem. Tente novamente ou fale connosco pelo WhatsApp.",
+      "firstName": "Indique o seu nome.",
+      "lastName": "Indique o seu apelido.",
+      "company": "O nome da empresa é demasiado longo.",
+      "email": "Indique um email válido.",
+      "emailRequired": "Para ser contactado por email, indique o seu email.",
+      "phone": "Indique um número moçambicano válido (9 dígitos, começando por 8).",
+      "channel": "Escolha como prefere ser contactado."
+    }
+  },
+  "footer": {
+    "tagline": "Sua escolha responsável. Crédito ágil e transparente em Maputo.",
+    "loans": "Créditos",
+    "company": "Empresa",
+    "rights": "Todos os direitos reservados.",
+    "staff": "Área da equipa"
+  },
+  "mbar": {
+    "call": "Ligar",
+    "apply": "Pedir crédito"
   },
   "apply": {
     "title": "Pedido de crédito",
@@ -204,10 +345,19 @@
       "approved": "Aprovado",
       "rejected": "Recusado"
     },
-    "update": "Atualizar"
-  },
-  "footer": {
-    "rights": "Todos os direitos reservados.",
-    "staff": "Área da equipa"
+    "update": "Atualizar",
+    "messages": {
+      "title": "Mensagens de contacto",
+      "empty": "Ainda não há mensagens.",
+      "columns": {
+        "date": "Data",
+        "name": "Nome",
+        "company": "Empresa",
+        "email": "Email",
+        "phone": "Telefone",
+        "channel": "Contactar por"
+      }
+    },
+    "applications": "Pedidos de crédito"
   }
 }

@@ -5,6 +5,8 @@ import { hasLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { MobileBar } from "@/components/mobile-bar";
+import { Cursor } from "@/components/cursor";
 import { site, siteUrl } from "@/config/site";
 import "../globals.css";
 
@@ -53,6 +55,8 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         <Header lang={lang} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer lang={lang} dict={dict} />
+        <MobileBar lang={lang} dict={dict} />
+        <Cursor />
       </body>
     </html>
   );

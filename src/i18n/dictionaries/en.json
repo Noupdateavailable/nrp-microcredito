@@ -1,41 +1,77 @@
 {
   "meta": {
     "title": "NRP Microcredit — Your responsible choice",
-    "description": "Personal loans, business credit and entrepreneur support in Maputo. Fast, transparent solutions. Apply online."
+    "description": "Personal loans, business credit and entrepreneur support in Maputo. Rates from 18% to 25% per month. Apply online."
+  },
+  "topbar": {
+    "tagline": "Your responsible choice",
+    "hours": "Monday to Friday, 08:00–19:00",
+    "phones": "Helpline"
   },
   "nav": {
     "home": "Home",
-    "products": "Loans",
-    "how": "Requirements",
+    "loans": "Loans",
+    "how": "How it works",
+    "requirements": "Requirements",
     "about": "About us",
     "contact": "Contact",
     "apply": "Apply now",
-    "switchLanguage": "Português"
+    "switchLanguage": "Português",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu",
+    "mainMenu": "Main menu"
   },
   "hero": {
-    "eyebrow": "Microcredit in Maputo",
+    "badge": "Microcredit in Maputo",
+    "titleStart": "Your responsible",
+    "titleHighlight": "choice.",
     "title": "Your responsible choice.",
     "subtitle": "Supporting your financial growth with fast, transparent solutions, at rates between 20% and 25% per month.",
     "primary": "Apply for credit",
-    "secondary": "Chat on WhatsApp",
+    "secondary": "See how it works",
     "stats": [
       {
         "value": "18–25%",
         "label": "Monthly interest rate"
       },
       {
-        "value": "Movable assets",
-        "label": "As collateral"
+        "value": "30,000–70,000 MZN",
+        "label": "Business credit"
       },
       {
-        "value": "Mon–Fri",
-        "label": "08:00 – 19:00"
+        "value": "Movable assets",
+        "label": "As collateral"
       }
     ]
   },
+  "sim": {
+    "title": "Estimate your loan",
+    "subtitle": "Choose the loan, the amount and the term.",
+    "product": "Loan type",
+    "amount": "Amount (MZN)",
+    "term": "Term",
+    "month": "month",
+    "months": "months",
+    "monthly": "Estimated monthly payment",
+    "total": "Total to repay",
+    "rate": "Rate",
+    "perMonth": "per month",
+    "to": "to",
+    "cta": "I want this loan",
+    "note": "Indicative estimate, with simple interest on the amount borrowed. Final terms are confirmed when we review your request."
+  },
+  "ticker": [
+    "Personal Loan",
+    "Business Credit Solutions",
+    "Entrepreneur Incentive",
+    "Rates from 18% to 25% per month",
+    "Movable assets as collateral",
+    "Apply online"
+  ],
   "products": {
-    "title": "Loans",
-    "subtitle": "Choose the credit solution that fits your needs.",
+    "eyebrow": "Our loans",
+    "title": "A loan for every need",
     "labels": {
       "rate": "Interest rate",
       "perMonth": "per month",
@@ -44,6 +80,8 @@
       "documents": "Documents to bring"
     },
     "guarantee": "Movable assets",
+    "simulate": "Estimate",
+    "apply": "Apply for this loan",
     "items": [
       {
         "key": "personal",
@@ -54,7 +92,8 @@
         "docs": [
           "Identity card (BI)",
           "NUIT (tax number)"
-        ]
+        ],
+        "short": "Personal"
       },
       {
         "key": "business",
@@ -67,7 +106,8 @@
           "NUIT (tax number)",
           "Business licence (Alvará)",
           "Commercial certificate"
-        ]
+        ],
+        "short": "Business"
       },
       {
         "key": "entrepreneur",
@@ -78,33 +118,26 @@
         "docs": [
           "Identity card (BI)",
           "NUIT (tax number)"
-        ]
+        ],
+        "short": "Entrepreneur"
       }
-    ],
-    "cta": "Apply for this credit"
+    ]
   },
   "how": {
-    "title": "Requirements",
-    "subtitle": "General documents for any credit request:",
-    "requirements": [
-      "Identity card (BI)",
-      "NUIT (tax number)",
-      "Bank statement for the last 3 months",
-      "Proof of income"
-    ],
-    "stepsTitle": "How it works",
+    "eyebrow": "How it works",
+    "title": "From request to credit in 4 steps",
     "steps": [
       {
         "title": "Apply",
-        "text": "Fill in the online form in a few minutes."
+        "text": "Online, here on the site, or on WhatsApp +258 87 387 8534."
       },
       {
         "title": "Review",
-        "text": "Our team reviews your request and calls you."
+        "text": "Our team reviews your request and calls you to explain the terms."
       },
       {
-        "title": "Documents",
-        "text": "Bring your documents to our office on Av. Agostinho Neto."
+        "title": "Bring your documents",
+        "text": "Bring your documents to our office at Av. Agostinho Neto, 662."
       },
       {
         "title": "Get your credit",
@@ -112,18 +145,126 @@
       }
     ]
   },
+  "requirements": {
+    "eyebrow": "Requirements",
+    "title": "What you need to apply",
+    "text": "General documents for any credit request. If you're unsure about a document, talk to us before coming to the office.",
+    "items": [
+      "Identity card (BI)",
+      "NUIT (tax number)",
+      "Bank statement for the last 3 months",
+      "Proof of income"
+    ],
+    "business": "For business credit: also a business licence (Alvará) and commercial certificate"
+  },
   "about": {
-    "title": "About NRP",
-    "text": "NRP Microcredit is your responsible choice. We support your financial growth with fast, transparent credit solutions and clear terms from the very first conversation."
+    "eyebrow": "About us",
+    "title": "Your responsible choice in Maputo",
+    "paragraphs": [
+      "NRP Microcredit supports your financial growth with fast, transparent credit solutions and clear terms from the very first conversation.",
+      "We offer personal loans, business credit and support for entrepreneurs, so everyone can find the right solution for their plans."
+    ],
+    "cards": [
+      {
+        "title": "Mission",
+        "text": "To support the financial growth of people and businesses with fast, responsible credit."
+      },
+      {
+        "title": "Values",
+        "text": "Clear rates, closeness to our clients and respect for each person's ability to repay."
+      },
+      {
+        "title": "Where we are",
+        "text": "Av. Agostinho Neto, 662, Maputo. Monday to Friday, 08:00 to 19:00."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Responsible, transparent credit",
+    "text": "Clear rates from the first conversation: between 18% and 25% per month, depending on the loan. Talk to us before you decide.",
+    "cta": "Talk to our team"
   },
   "contact": {
-    "title": "Contact",
-    "phone": "Phones",
+    "eyebrow": "Contact",
+    "title": "Apply for your loan today",
+    "text": "Leave your details and continue your request online. Our team will then call you.",
+    "office": "Office",
     "whatsapp": "WhatsApp",
     "email": "Email",
-    "address": "Address",
     "hours": "Opening hours",
-    "subtitle": "Get in touch with our team for more information."
+    "phones": "Phones",
+    "quick": {
+      "name": "Full name",
+      "namePh": "Your name",
+      "phone": "Mobile",
+      "phonePh": "84 123 4567",
+      "product": "Loan type",
+      "amount": "Amount wanted (MZN)",
+      "amountPh": "25,000",
+      "submit": "Continue request",
+      "note": "You'll finish your request on the next page."
+    }
+  },
+  "talk": {
+    "eyebrow": "Talk to us",
+    "title": "Have questions? We'll contact you.",
+    "text": "Leave your details and tell us how you'd like to be contacted. We reply Monday to Friday, 08:00 to 19:00.",
+    "phone": "Phone",
+    "callAndWa": "(calls and WhatsApp)",
+    "openWa": "Open a WhatsApp chat",
+    "address": "Address",
+    "email": "Email",
+    "form": {
+      "firstName": "First name",
+      "firstNamePh": "Your first name",
+      "lastName": "Last name",
+      "lastNamePh": "Your last name",
+      "company": "Company name",
+      "optional": "(optional)",
+      "companyPh": "e.g. Loja Esperança, Lda.",
+      "email": "Email",
+      "emailPh": "name@example.co.mz",
+      "phone": "Phone number",
+      "phonePh": "84 123 4567",
+      "channel": "How should we contact you?",
+      "channels": {
+        "call": "Call",
+        "whatsapp": "WhatsApp",
+        "sms": "SMS",
+        "email": "Email"
+      },
+      "submit": "Send message",
+      "sending": "Sending…",
+      "privacy": "Your details are only used to reply to you."
+    },
+    "success": {
+      "title": "Message sent!",
+      "text": "Thank you for contacting NRP Microcredit. We'll reply the way you chose, Monday to Friday, 08:00 to 19:00.",
+      "urgent": "If you need help right away, call",
+      "or": "or",
+      "again": "Send another message"
+    },
+    "errors": {
+      "generic": "We couldn't send your message. Please try again or contact us on WhatsApp.",
+      "firstName": "Please enter your first name.",
+      "lastName": "Please enter your last name.",
+      "company": "The company name is too long.",
+      "email": "Please enter a valid email.",
+      "emailRequired": "To be contacted by email, please enter your email.",
+      "phone": "Enter a valid Mozambican number (9 digits starting with 8).",
+      "channel": "Choose how you'd like to be contacted."
+    }
+  },
+  "footer": {
+    "tagline": "Your responsible choice. Fast, transparent credit in Maputo.",
+    "loans": "Loans",
+    "company": "Company",
+    "rights": "All rights reserved.",
+    "staff": "Staff area"
+  },
+  "mbar": {
+    "call": "Call",
+    "apply": "Apply now"
   },
   "apply": {
     "title": "Credit application",
@@ -204,10 +345,19 @@
       "approved": "Approved",
       "rejected": "Rejected"
     },
-    "update": "Update"
-  },
-  "footer": {
-    "rights": "All rights reserved.",
-    "staff": "Staff area"
+    "update": "Update",
+    "messages": {
+      "title": "Contact messages",
+      "empty": "No messages yet.",
+      "columns": {
+        "date": "Date",
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "phone": "Phone",
+        "channel": "Contact by"
+      }
+    },
+    "applications": "Credit applications"
   }
 }

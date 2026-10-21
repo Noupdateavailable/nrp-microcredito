@@ -1,40 +1,167 @@
 @import "tailwindcss";
 
+/* NRP design (canvas "NRP Microcrédito Website"): navy + red on white, Plus Jakarta Sans. */
 @theme {
   --color-brand-red: #c8102e;
   --color-brand-red-dark: #a00c24;
+  --color-brand-red-soft: #ffe8eb;
   --color-brand-blue: #0b2e6f;
+  --color-brand-blue-mid: #1c4a9c;
   --color-brand-blue-light: #0f5ada; /* blue from the NRP logo */
-  --color-brand-sky: #eef3fb;
-  --color-ink: #13203a;
-  --color-muted: #5b6780;
+  --color-brand-night: #071f4d; /* footer */
+  --color-brand-sky: #f2f5fb; /* alternating section ground */
+  --color-line: #e3e8f2; /* borders */
+  --color-line-strong: #c5cedf; /* form fields */
+  --color-ink: #0e1a33;
+  --color-muted: #4a5672;
+  --color-mist: #d6deee; /* text on navy */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--color-brand-blue);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand-blue-light);
+    outline-offset: 2px;
+  }
 }
 
-body {
-  background: #ffffff;
-  color: var(--color-ink);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
+@layer components {
+  /* Form field, as in the design: 10px radius, soft focus ring */
+  .field {
+    @apply w-full rounded-[10px] border border-line-strong bg-white px-4 py-3.5 text-base text-ink placeholder:text-slate-400 focus:outline-none;
+    transition: box-shadow 0.2s;
+  }
+  .field:focus {
+    box-shadow: 0 0 0 4px rgba(11, 46, 111, 0.18);
+  }
+
+  .btn-red {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-brand-red px-6 py-3 font-bold text-white no-underline disabled:opacity-60;
+  }
+
+  /* Section eyebrow label */
+  .eyebrow {
+    @apply text-sm font-bold tracking-[1.5px] text-brand-red uppercase;
+  }
 }
 
-:focus-visible {
-  outline: 3px solid var(--color-brand-blue-light);
-  outline-offset: 2px;
+/* ---------- Motion (all switched off for reduced-motion users at the end) ---------- */
+@keyframes nrpUp { from { opacity: 0; translate: 0 28px } to { opacity: 1; translate: 0 0 } }
+@keyframes nrpPop { from { opacity: 0; translate: 0 40px; scale: 0.96 } to { opacity: 1; translate: 0 0; scale: 1 } }
+@keyframes nrpDraw { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+@keyframes nrpFloatA { 0%, 100% { translate: 0 0 } 50% { translate: -28px 22px } }
+@keyframes nrpFloatB { 0%, 100% { translate: 0 0; rotate: 0deg } 50% { translate: 20px -16px; rotate: 14deg } }
+@keyframes nrpFloatC { 0%, 100% { translate: 0 0 } 50% { translate: 0 -14px } }
+@keyframes nrpPing { 0% { transform: scale(1); opacity: 0.75 } 80%, 100% { transform: scale(2.8); opacity: 0 } }
+@keyframes nrpPulse { 0% { box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.45) } 70%, 100% { box-shadow: 0 0 0 14px rgba(200, 16, 46, 0) } }
+@keyframes nrpMarquee { to { transform: translateX(-50%) } }
+@keyframes nrpReveal { from { opacity: 0; translate: 0 48px } to { opacity: 1; translate: 0 0 } }
+@keyframes nrpDrop { from { opacity: 0; translate: 0 -10px } to { opacity: 1; translate: 0 0 } }
+
+.nrp-in { animation: nrpUp 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both }
+.nrp-d1 { animation-delay: 0.05s } .nrp-d2 { animation-delay: 0.15s } .nrp-d3 { animation-delay: 0.28s }
+.nrp-d4 { animation-delay: 0.4s } .nrp-d5 { animation-delay: 0.52s }
+.nrp-pop { animation: nrpPop 1s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both }
+.nrp-float-a { animation: nrpFloatA 14s ease-in-out infinite }
+.nrp-float-b { animation: nrpFloatB 18s ease-in-out infinite }
+.nrp-float-c { animation: nrpFloatC 9s ease-in-out infinite }
+.nrp-drop { animation: nrpDrop 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both }
+
+/* Red highlight drawn under the last word of the headline */
+.nrp-underline { position: relative; isolation: isolate; display: inline-block }
+.nrp-underline::after {
+  content: ""; position: absolute; left: -6px; right: -6px; bottom: 6px; height: 16px; border-radius: 6px;
+  background: var(--color-brand-red); z-index: -1; transform-origin: left center;
+  animation: nrpDraw 0.9s 0.85s cubic-bezier(0.7, 0, 0.2, 1) both;
+}
+@media (max-width: 639px) { .nrp-underline::after { height: 10px; bottom: 4px } }
+
+.nrp-ping { position: relative }
+.nrp-ping::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--color-brand-red);
+  animation: nrpPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.nrp-pulse { animation: nrpPulse 2.4s ease-out infinite }
+
+.nrp-btn { transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.25s }
+.nrp-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(200, 16, 46, 0.35) }
+.nrp-btn:active { transform: translateY(0) scale(0.98) }
+.nrp-btn-ghost:hover { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25) }
+
+.nrp-nav-link {
+  background-image: linear-gradient(var(--color-brand-red), var(--color-brand-red));
+  background-repeat: no-repeat; background-position: 0 100%; background-size: 0 2px;
+  padding-bottom: 4px; transition: background-size 0.3s ease;
+}
+.nrp-nav-link:hover { background-size: 100% 2px }
+
+.nrp-lift { transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s }
+.nrp-lift:hover { transform: translateY(-8px); box-shadow: 0 22px 48px rgba(11, 46, 111, 0.14) }
+.nrp-icon, .nrp-num { transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) }
+.nrp-lift:hover .nrp-icon { transform: rotate(-8deg) scale(1.1) }
+.nrp-lift:hover .nrp-num { transform: scale(1.12) rotate(-8deg) }
+.nrp-arrow-i { display: inline-block; transition: transform 0.25s }
+.nrp-lift:hover .nrp-arrow-i, .nrp-arrow:hover .nrp-arrow-i { transform: translateX(6px) }
+
+.nrp-row { transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.3s }
+.nrp-row:hover { transform: translateX(8px); box-shadow: 0 8px 20px rgba(11, 46, 111, 0.08) }
+
+.nrp-pill { transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.15s }
+.nrp-pill:hover { transform: translateY(-2px) }
+.nrp-pill:active { transform: scale(0.95) }
+
+.nrp-marquee-track { animation: nrpMarquee 30s linear infinite }
+.nrp-marquee:hover .nrp-marquee-track { animation-play-state: paused }
+
+/* Sections rise in as they scroll into view (browsers without scroll timelines just show them) */
+@supports (animation-timeline: view()) {
+  .nrp-reveal { animation: nrpReveal linear both; animation-timeline: view(); animation-range: entry 0% entry 60% }
+  .nrp-reveal:nth-child(2) { animation-range: entry 6% entry 66% }
+  .nrp-reveal:nth-child(3) { animation-range: entry 12% entry 72% }
+  .nrp-reveal:nth-child(4) { animation-range: entry 18% entry 78% }
+  .nrp-reveal:nth-child(5) { animation-range: entry 24% entry 84% }
 }
 
-.field {
-  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-base text-ink placeholder:text-slate-400 focus:border-brand-blue-light focus:outline-none focus:ring-2 focus:ring-brand-blue-light/30;
+/* Cursor follower (mouse only) */
+.nrp-cursor-dot, .nrp-cursor-ring {
+  position: fixed; left: 0; top: 0; pointer-events: none; z-index: 2147483000; opacity: 0; border-radius: 50%;
+  will-change: transform;
 }
-
-.btn-red {
-  @apply inline-flex items-center justify-center rounded-full bg-brand-red px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-brand-red-dark disabled:opacity-60;
+.nrp-cursor-dot {
+  width: 10px; height: 10px; margin: -5px 0 0 -5px; background: var(--color-brand-red); box-shadow: 0 0 0 2px #ffffff;
+  transition: opacity 0.25s, scale 0.2s;
 }
+.nrp-cursor-ring {
+  width: 40px; height: 40px; margin: -20px 0 0 -20px; border: 1.5px solid rgba(200, 16, 46, 0.6); box-sizing: border-box;
+  transition: opacity 0.25s, width 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), height 0.3s cubic-bezier(0.2, 0.7, 0.2, 1),
+    margin 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), background-color 0.3s, border-color 0.3s, scale 0.15s;
+}
+.nrp-cursor-dot.is-visible, .nrp-cursor-ring.is-visible { opacity: 1 }
+.nrp-cursor-ring.is-hover { width: 66px; height: 66px; margin: -33px 0 0 -33px; background-color: rgba(200, 16, 46, 0.12); border-color: var(--color-brand-red) }
+.nrp-cursor-dot.is-hover { scale: 0.6 }
+.nrp-cursor-ring.is-down { scale: 0.8 }
+.nrp-cursor-dot.is-down { scale: 1.4 }
+@media (hover: none), (pointer: coarse) { .nrp-cursor-dot, .nrp-cursor-ring { display: none } }
 
-.btn-outline {
-  @apply inline-flex items-center justify-center rounded-full border-2 border-white/80 px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-brand-blue;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto }
+  .nrp-in, .nrp-pop, .nrp-float-a, .nrp-float-b, .nrp-float-c, .nrp-ping::after, .nrp-pulse, .nrp-marquee-track,
+  .nrp-reveal, .nrp-underline::after, .nrp-drop { animation: none !important }
+  .nrp-btn, .nrp-lift, .nrp-row, .nrp-pill { transition: none !important }
+  .nrp-cursor-ring { display: none }
 }

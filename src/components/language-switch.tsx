@@ -13,7 +13,7 @@ export function LanguageSwitch({ lang, label }: { lang: Locale; label: string })
     <Link
       href={href}
       hrefLang={target}
-      className="inline-flex min-h-10 items-center rounded-full border border-slate-300 px-3.5 text-sm font-medium text-brand-blue hover:border-brand-blue"
+      className="inline-flex min-h-10 items-center rounded-full border-2 border-line px-3.5 text-sm font-semibold text-brand-blue no-underline hover:border-brand-blue"
     >
       {label}
     </Link>
