@@ -15,7 +15,7 @@
   "hero": {
     "eyebrow": "Microcrédito em Maputo",
     "title": "Sua escolha responsável.",
-    "subtitle": "Apoiando o seu crescimento financeiro com soluções ágeis e transparentes, com taxas entre 20% e 25% ao mês.",
+    "subtitle": "Apoiando o seu crescimento financeiro com soluções ágeis e transparentes, com taxas entre 20% e 25% mensal.",
     "primary": "Pedir crédito agora",
     "secondary": "Falar no WhatsApp",
     "stats": [
@@ -48,7 +48,7 @@
       {
         "key": "personal",
         "name": "Crédito Pessoal",
-        "description": "Soluções financeiras personalizadas para as suas necessidades específicas, com rapidez e eficiência.",
+        "description": "Descubra soluções financeiras personalizadas para atender às suas necessidades específicas com rapidez e eficiência.",
         "rate": "25%",
         "amount": "",
         "docs": [
@@ -58,8 +58,8 @@
       },
       {
         "key": "business",
-        "name": "Crédito para Negócios",
-        "description": "Suporte financeiro estratégico para promover o crescimento sustentável das suas actividades empresariais.",
+        "name": "Soluções de Crédito para Negócios",
+        "description": "Proporcionamos suporte financeiro estratégico para promover o crescimento sustentável das suas atividades empresariais.",
         "rate": "20% – 25%",
         "amount": "30.000 – 70.000 MZN",
         "docs": [
@@ -89,7 +89,7 @@
     "requirements": [
       "Bilhete de Identidade (BI)",
       "NUIT",
-      "Extracto bancário dos últimos 3 meses",
+      "Extrato bancário dos últimos 3 meses",
       "Declaração de rendimentos"
     ],
     "stepsTitle": "Como funciona",
@@ -154,10 +154,10 @@
     },
     "productOptions": {
       "personal": "Crédito Pessoal",
-      "business": "Crédito para Negócios",
+      "business": "Soluções de Crédito para Negócios",
       "entrepreneur": "Incentivo ao Empreendedor"
     },
-    "select": "Seleccione…",
+    "select": "Selecione…",
     "submit": "Enviar pedido",
     "submitting": "A enviar…",
     "successTitle": "Pedido recebido!",
@@ -169,8 +169,8 @@
       "email": "Email inválido.",
       "city": "Indique a cidade ou distrito.",
       "occupation": "Indique a sua ocupação.",
-      "monthlyIncome": "Seleccione uma opção.",
-      "product": "Seleccione o tipo de crédito.",
+      "monthlyIncome": "Selecione uma opção.",
+      "product": "Selecione o tipo de crédito.",
       "amount": "Indique um montante entre 1.000 e 500.000 MZN.",
       "term": "Indique um prazo entre 1 e 24 meses.",
       "purpose": "Descreva brevemente a finalidade (mínimo 10 caracteres).",
@@ -204,7 +204,7 @@
       "approved": "Aprovado",
       "rejected": "Recusado"
     },
-    "update": "Actualizar"
+    "update": "Atualizar"
   },
   "footer": {
     "rights": "Todos os direitos reservados.",

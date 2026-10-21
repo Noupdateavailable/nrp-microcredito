@@ -48,7 +48,7 @@
       {
         "key": "personal",
         "name": "Personal Loan",
-        "description": "Tailored financial solutions for your specific needs, delivered quickly and efficiently.",
+        "description": "Discover tailored financial solutions that meet your specific needs, quickly and efficiently.",
         "rate": "25%",
         "amount": "",
         "docs": [
@@ -58,8 +58,8 @@
       },
       {
         "key": "business",
-        "name": "Business Credit",
-        "description": "Strategic financial support to grow your business activities sustainably.",
+        "name": "Business Credit Solutions",
+        "description": "We provide strategic financial support to grow your business activities sustainably.",
         "rate": "20% – 25%",
         "amount": "30,000 – 70,000 MZN",
         "docs": [
@@ -154,7 +154,7 @@
     },
     "productOptions": {
       "personal": "Personal Loan",
-      "business": "Business Credit",
+      "business": "Business Credit Solutions",
       "entrepreneur": "Entrepreneur Incentive"
     },
     "select": "Select…",
