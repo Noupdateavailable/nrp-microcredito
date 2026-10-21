@@ -162,7 +162,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             </ContactItem>
             <ContactItem label={dict.contact.whatsapp}>
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="inline-block py-1.5 hover:text-brand-red">
-                {site.phones[0]}
+                {site.whatsappDisplay}
               </a>
             </ContactItem>
             <ContactItem label={dict.contact.email}>

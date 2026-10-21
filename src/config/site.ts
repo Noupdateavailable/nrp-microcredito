@@ -3,7 +3,8 @@ export const site = {
   name: "NRP Microcrédito",
   legalName: "NRP Microcrédito E.I",
   phones: ["+258 84 280 5988", "+258 87 387 8534"],
-  whatsapp: "258842805988", // digits only, used for wa.me links — confirm this is the WhatsApp number
+  whatsapp: "258873878534", // WhatsApp Business line, digits only for wa.me links
+  whatsappDisplay: "+258 87 387 8534",
   email: "nrp.microcredito@gmail.com",
   address: "Avenida Agostinho Neto, 936, Maputo",
   hours: { pt: "Seg–Sex, 08:00–19:00", en: "Mon–Fri, 08:00–19:00" },
