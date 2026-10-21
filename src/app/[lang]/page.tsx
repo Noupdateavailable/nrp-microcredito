@@ -56,11 +56,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-extrabold text-brand-blue">{dict.products.title}</h2>
           <p className="mt-2 text-muted">{dict.products.subtitle}</p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {dict.products.items.map((p) => (
               <article
                 key={p.key}
-                className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:row-span-6 lg:grid lg:grid-rows-subgrid lg:gap-y-0"
               >
                 <h3 className="text-xl font-bold text-brand-blue">{p.name}</h3>
                 <p className="mt-2 text-muted">{p.description}</p>
@@ -89,7 +89,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                     </li>
                   ))}
                 </ul>
-                <Link href={`/${lang}/apply?product=${p.key}`} className="btn-red mt-6">
+                <Link href={`/${lang}/apply?product=${p.key}`} className="btn-red mt-6 lg:self-end">
                   {dict.products.cta}
                 </Link>
               </article>
@@ -155,18 +155,18 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <ContactItem label={dict.contact.phone}>
               {site.phones.map((ph) => (
-                <a key={ph} href={telHref(ph)} className="block hover:text-brand-red">
+                <a key={ph} href={telHref(ph)} className="block py-1.5 hover:text-brand-red">
                   {ph}
                 </a>
               ))}
             </ContactItem>
             <ContactItem label={dict.contact.whatsapp}>
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hover:text-brand-red">
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="inline-block py-1.5 hover:text-brand-red">
                 {site.phones[0]}
               </a>
             </ContactItem>
             <ContactItem label={dict.contact.email}>
-              <a href={`mailto:${site.email}`} className="break-all hover:text-brand-red">
+              <a href={`mailto:${site.email}`} className="inline-block break-all py-1.5 hover:text-brand-red">
                 {site.email}
               </a>
             </ContactItem>

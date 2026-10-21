@@ -21,14 +21,14 @@ export function Header({ lang, dict }: { lang: Locale; dict: Dictionary }) {
         </Link>
         <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="text-sm font-medium text-ink hover:text-brand-red">
+            <Link key={l.href} href={l.href} className="py-2.5 text-sm font-medium text-ink hover:text-brand-red">
               {l.label}
             </Link>
           ))}
         </nav>
         <div className="flex items-center gap-2">
           <LanguageSwitch lang={lang} label={dict.nav.switchLanguage} />
-          <Link href={`/${lang}/apply`} className="btn-red !hidden whitespace-nowrap !px-4 !py-2 text-sm sm:!inline-flex">
+          <Link href={`/${lang}/apply`} className="btn-red !hidden whitespace-nowrap !px-4 !py-2.5 text-sm sm:!inline-flex">
             {dict.nav.apply}
           </Link>
         </div>

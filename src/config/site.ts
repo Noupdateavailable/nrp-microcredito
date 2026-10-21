@@ -9,6 +9,13 @@ export const site = {
   hours: { pt: "Seg–Sex, 08:00–19:00", en: "Mon–Fri, 08:00–19:00" },
 };
 
+/** Public site address. Set NEXT_PUBLIC_SITE_URL once a custom domain exists; Vercel's own domain is the fallback. */
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const whatsappLink = (text?: string) =>
   `https://wa.me/${site.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
 
