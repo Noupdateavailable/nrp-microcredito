@@ -52,8 +52,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </section>
 
       {/* Products */}
-      <section id="products" className="scroll-mt-20 px-4 py-20">
-        <div className="mx-auto max-w-6xl">
+      <section id="products" className="scroll-mt-20 py-20">
+        <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-extrabold text-brand-blue">{dict.products.title}</h2>
           <p className="mt-2 text-muted">{dict.products.subtitle}</p>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -99,8 +99,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </section>
 
       {/* Requirements + how it works */}
-      <section id="how" className="scroll-mt-20 bg-brand-sky px-4 py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.6fr]">
+      <section id="how" className="scroll-mt-20 bg-brand-sky py-20">
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-[1fr_1.6fr]">
           <div>
             <h2 className="text-3xl font-extrabold text-brand-blue">{dict.how.title}</h2>
             <p className="mt-2 text-muted">{dict.how.subtitle}</p>
@@ -129,8 +129,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </section>
 
       {/* About */}
-      <section id="about" className="scroll-mt-20 px-4 py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
+      <section id="about" className="scroll-mt-20 py-20">
+        <div className="mx-auto grid max-w-6xl items-center px-4 gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-3xl font-extrabold text-brand-blue">{dict.about.title}</h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">{dict.about.text}</p>
@@ -148,8 +148,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="scroll-mt-20 bg-brand-sky px-4 py-20">
-        <div className="mx-auto max-w-6xl">
+      <section id="contact" className="scroll-mt-20 bg-brand-sky py-20">
+        <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-extrabold text-brand-blue">{dict.contact.title}</h2>
           <p className="mt-2 text-muted">{dict.contact.subtitle}</p>
           <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

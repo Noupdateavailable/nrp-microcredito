@@ -38,8 +38,8 @@ export default async function AdminPage({ params }: PageProps<"/[lang]/admin">) 
   const dict = await getDictionary(lang);
 
   return (
-    <section className="bg-brand-sky px-4 py-10">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-brand-sky py-10">
+      <div className="mx-auto max-w-6xl px-4">
         <Suspense fallback={<p className="text-muted">{dict.admin.loading}</p>}>
           <AdminContent lang={lang} dict={dict} />
         </Suspense>
